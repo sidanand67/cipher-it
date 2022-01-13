@@ -10,28 +10,39 @@
 </head>
 <body>
     <header>
-        <h1>Cipher.It</h1>
+        <h1 class="title">Cipher.It</h1>
     </header>
     <main>
-        <form onsubmit="event.preventDefault()">
-            <label for="message">Message</label>
-            <textarea name="message" id="message" cols="80" rows="10" required placeholder="Enter your message here..."></textarea>
+        <form class="card" onsubmit="event.preventDefault()">
+            <div class="input-grp">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="80" rows="10" required placeholder="Enter your message here..."></textarea>
+            </div>
 
-            <label for="shift-key">Select your Shift Key</label>
-            <select name="shift-key" id="shift-key" required>
-                <option value=""></option>
-            </select>
+            <div class="input-grp">
+                <label for="shift-key">Select your Shift Key</label>
+                <select name="shift-key" id="shift-key" required>
+                    <option value=""></option>
+                </select>
+            </div>
 
-            <span>Choose your Mode</span>
-            <input type="radio" name="mode" id="encrypt" checked>
-            <label for="encrypt">Encrypt</label>
-            <input type="radio" name="mode" id="decrypt">
-            <label for="decrypt">Decrypt</label>
+            <div class="input-grp">
+                <span>Choose your Mode</span>
+                <input type="radio" name="mode" id="encrypt" value="0" checked>
+                <label for="encrypt">Encrypt</label>
+                <input type="radio" name="mode" id="decrypt" value="1">
+                <label for="decrypt">Decrypt</label>
+            </div>
 
-            <button>Submit</button>
+            <div class="btn-grp">
+                <button id="submit-btn">Submit</button>
+            </div>
+
+            <div class="input-grp">
+                <textarea name="result-box" id="result-box" cols="30" rows="10" placeholder="Your result gets printed here..." disabled></textarea>
+            </div>
         </form>
 
-        <textarea name="result-box" id="result-box" cols="30" rows="10" placeholder="Your result gets printed here..." disabled></textarea>
     </main>
 
     <script src="./script.js"></script>
