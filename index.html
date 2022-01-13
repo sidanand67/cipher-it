@@ -16,7 +16,7 @@
         <form class="card" onsubmit="event.preventDefault()">
             <div class="input-grp">
                 <label for="message">Message</label>
-                <textarea name="message" id="message" cols="80" rows="10" required placeholder="Enter your message here..."></textarea>
+                <textarea name="message" id="message" cols="30" rows="5" required placeholder="Enter your message here..."></textarea>
             </div>
 
             <div class="input-grp">
@@ -26,10 +26,13 @@
                 </select>
             </div>
 
+            <span>Choose your Mode</span>
             <div class="input-grp">
-                <span>Choose your Mode</span>
                 <input type="radio" name="mode" id="encrypt" value="0" checked>
                 <label for="encrypt">Encrypt</label>
+            </div>
+
+            <div class="input-grp"> 
                 <input type="radio" name="mode" id="decrypt" value="1">
                 <label for="decrypt">Decrypt</label>
             </div>
