@@ -103,7 +103,11 @@ textarea {
     }
 
     textarea{
-        width: 70vw; 
-        height: 35vh; 
+        width: 90vw; 
+        height: 25vh; 
+    }
+
+    .card > .input-grp > select{
+        width: 40%; 
     }
 }
