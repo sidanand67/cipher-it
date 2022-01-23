@@ -23,10 +23,7 @@ function encryption(message, key) {
     let dummyResult = [], temp; 
     for(let i = 0; i < message.length; i++){
         temp = message.charCodeAt(i); 
-        if (temp == 32) {
-            dummyResult.push(message[i]); 
-        } 
-        else {
+        if (temp >= 33 && temp <= 126) {
             if (temp + key > 126) {
                 temp = ((temp+key) % 126 + 33) - 1; 
             }
@@ -34,6 +31,9 @@ function encryption(message, key) {
                 temp = temp + key; 
             }
             dummyResult.push(String.fromCharCode(temp)); 
+        } 
+        else {
+            dummyResult.push(message[i]); 
         }
     }
     return dummyResult.join(''); 
@@ -43,10 +43,7 @@ function decryption(message, key) {
     let dummyResult = [], temp; 
     for(let i = 0; i < message.length; i++){
         temp = message.charCodeAt(i); 
-        if (temp == 32){
-            dummyResult.push(message[i]); 
-        }
-        else{
+        if (temp >= 33 && temp <= 126){
             if (temp - key < 33) {
                 temp = (temp-key)+94; 
             }
@@ -54,6 +51,9 @@ function decryption(message, key) {
                 temp = temp - key; 
             }
             dummyResult.push(String.fromCharCode(temp)); 
+        }
+        else{
+            dummyResult.push(message[i]); 
         }
     }
     return dummyResult.join(''); 
