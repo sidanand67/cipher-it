@@ -47,7 +47,7 @@ function decryption(message, key) {
         }
         else{
             if (temp - key < 33) {
-                temp = (temp-key)%33+126-1; 
+                temp = (temp-key)+94; 
             }
             else {
                 temp = temp - key; 
