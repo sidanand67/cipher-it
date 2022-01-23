@@ -58,6 +58,10 @@ textarea {
     margin-bottom: 0.7em;
 }
 
+.card > .input-grp > span{
+    margin-right: 0.5em;
+}
+
 .btn-grp {
     display: flex; 
     justify-content: center;
@@ -100,7 +104,7 @@ textarea {
 
 @media all and (max-width: 720px){
     textarea{
-        width: 90vw; 
+        width: 85vw; 
         height: 25vh; 
     }
 
