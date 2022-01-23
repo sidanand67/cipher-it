@@ -3,6 +3,7 @@ let shift_key = document.getElementById("shift-key");
 let message_inp = document.getElementById("message"); 
 let submit_btn = document.getElementById("submit-btn"); 
 let result_box = document.getElementById("result-box"); 
+let copyBtn = document.getElementById("copy-btn"); 
 let checked_mode;
 let key; 
 let message; 
@@ -72,19 +73,16 @@ function printResult(){
         }
     
         result_box.disabled = false;
-        result_box.innerHTML = result;
+        result_box.textContent = result;
+        copyBtn.style.visibility = "visible"; 
 
-
-
-
-        // console.log(message); 
-        console.log(key); 
-        // console.log(checked_mode); 
     } 
 }
 
-
-
+function copyMsg(){
+    result_box.select(); 
+    document.execCommand("copy"); 
+}
 
 
 // Function Calls

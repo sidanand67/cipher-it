@@ -12,7 +12,7 @@
     <header>
         <h1 class="title">Cipher.It</h1>
     </header>
-    <main>
+    <section class="container">
         <form class="card" onsubmit="event.preventDefault()">
             <div class="input-grp">
                 <label for="message">Message</label>
@@ -39,12 +39,13 @@
                 <button id="submit-btn">Submit</button>
             </div>
 
-            <div class="input-grp">
-                <textarea name="result-box" id="result-box" cols="30" rows="10" placeholder="Your result gets printed here..." disabled readonly></textarea>
+            <div class="input-grp textarea-container">
+                <textarea name="result-box" id="result-box" placeholder="Your result gets printed here..." disabled readonly ></textarea>
+                <button id="copy-btn" onclick="copyMsg()">Copy</button>
             </div>
         </form>
 
-    </main>
+    </section>
 
     <script src="./script.js"></script>
 </body>
