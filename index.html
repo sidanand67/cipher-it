@@ -16,25 +16,23 @@
         <form class="card" onsubmit="event.preventDefault()">
             <div class="input-grp">
                 <label for="message">Message</label>
-                <textarea name="message" id="message" cols="30" rows="5" required placeholder="Enter your message here..."></textarea>
+                <textarea name="message" id="message" required placeholder="Enter your message here..."></textarea>
             </div>
 
             <div class="input-grp">
-                <label for="shift-key">Select your Shift Key</label>
+                <label for="shift-key">Choose your Shift Key</label>
                 <select name="shift-key" id="shift-key" required>
                     <option value=""></option>
                 </select>
             </div>
 
-            <span>Choose your Mode</span>
             <div class="input-grp">
+                <label for="mode">Select your mode</label>
                 <input type="radio" name="mode" id="encrypt" value="0" checked>
-                <label for="encrypt">Encrypt</label>
-            </div>
-
-            <div class="input-grp"> 
+                <span>Encrypt</span>
+            
                 <input type="radio" name="mode" id="decrypt" value="1">
-                <label for="decrypt">Decrypt</label>
+                <span>Decrypt</span>
             </div>
 
             <div class="btn-grp">
@@ -42,7 +40,7 @@
             </div>
 
             <div class="input-grp">
-                <textarea name="result-box" id="result-box" cols="30" rows="10" placeholder="Your result gets printed here..." disabled></textarea>
+                <textarea name="result-box" id="result-box" cols="30" rows="10" placeholder="Your result gets printed here..." disabled readonly></textarea>
             </div>
         </form>
 

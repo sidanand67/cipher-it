@@ -9,6 +9,16 @@ body{
     color: white;
 }
 
+textarea {
+    resize: none;
+    height: 25vh; 
+    width: 65vw; 
+    font-size: 1.1rem;
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-top: 5px; 
+}
+
 .title{
     text-align: center;
     padding: 20px; 
@@ -22,20 +32,30 @@ main {
 
 .card {
     display: flex; 
-    margin: 0 auto; 
     padding: 20px; 
+    margin: 0 auto; 
     border-radius: 20px;
     color: black;
     flex-direction: column;
     background-color: #caf0f8;
+    width: 80vw;
 }
 
-.card .input-grp{
-    padding: 10px; 
-}
 
 .card .input-grp label{
     display: block; 
     padding: 10px auto;
+    margin: 8px auto; 
 }
 
+.btn-grp {
+    display: flex; 
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+#submit-btn{
+    padding: 10px 15px; 
+    font-size: 18px;
+    border-radius: 10px; 
+}

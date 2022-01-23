@@ -47,7 +47,7 @@ function decryption(message, key) {
         }
         else{
             if (temp - key < 33) {
-                temp = ((temp-key) % 126 + 33) - 1; 
+                temp = (temp-key)%33+126-1; 
             }
             else {
                 temp = temp - key; 
@@ -71,7 +71,9 @@ function printResult(){
             result = decryption(message, key); 
         }
     
-        console.log(result); 
+        result_box.disabled = false;
+        result_box.innerHTML = result;
+
 
 
 
